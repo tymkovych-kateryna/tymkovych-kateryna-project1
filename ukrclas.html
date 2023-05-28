@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класицизм: віденський та український класицизм</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/img2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="vidclas.html">Віденський класицизм</a></li>
+                    <li><a href="ukrclas.html">Український класицизм</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1 id="my-text">Український класицизм</h1>
+    </section>
+
+    <section class="ukr-clas">
+        <div class="row">
+            <div class="ukr-clas-col-left">
+                <img src="images/img7.jpg" alt="">
+            </div>
+
+            <div class="ukr-clas-col-right">
+                <h2>Український класицизм у музиці: Вплив, особливості та спадщина</h2>
+                <hr>
+                <p>
+                    Український класицизм у музиці, що охоплював період XVIII і початок XIX століть, був сильно вплинутий європейським класицизмом. Він відображав класичні риси, такі як ясність, симетрія та раціональність.
+                    Український класицизм виявився особливо помітним у вокальній музиці, зокрема у опері, кантаті та хорових творах. Композитори цього періоду створювали музику, що відображала енергію, емоції та високу майстерність.
+                </p>
+                <hr>
+                <div style="text-align: center;">
+                    <button class="hero-btn contact-btn" id="showContentButton">Перейти до відео матеріалів</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hiddenContent" style="display: none;">
+        <h4>Дмитро Бортнянський Concerto di Cembalo D-dur в супроводі камерного оркестру</h4>
+        <div class="lessons">
+            <iframe width="760" height="415" src="https://www.youtube.com/embed/eu_c1EG2nZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <h4>Дмитро Бортнянський "Алкід" Увертюра</h4>
+        <div class="lessons">
+            <iframe width="760" height="415" src="https://www.youtube.com/embed/9ikVeBeZrUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <h4>Максим Созонтович Березовский - Соната (1772): II.Grave</h4>
+        <div class="lessons">
+            <iframe width="760" height="415" src="https://www.youtube.com/embed/V3wQ8zQQsJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="footer">
+        <i class="fa fa-moon-o"></i>
+        <p>© 2023. Розроблено<br>Тимкович Катериною.</p>
+    </section>
+
+
+
+
+    <!----- js code for toggle menu ----->
+    <script>
+        let navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+
+    <!----- js code for title animation ----->
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let myText=document.getElementById("my-text");
+            myText.style.opacity="1";
+        });
+    </script>
+
+    <!-- js code for showContentButton button -->
+    <script>
+        let showContentButton=document.getElementById("showContentButton");
+        let hiddenContent=document.getElementById("hiddenContent");
+        let videos=hiddenContent.getElementsByTagName("iframe");
+
+        showContentButton.addEventListener("click",function(){
+            hiddenContent.style.display="block";
+            for(let i=0; i<videos.length; i++){
+                videos[i].style.display="block";
+            }
+            hiddenContent.scrollIntoView({behavior: "smooth"});
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класицизм: віденський та український класицизм</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/img2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="vidclas.html">Віденський класицизм</a></li>
+                    <li><a href="ukrclas.html">Український класицизм</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1 id="my-text">Творчість композиторів-класиків</h1>
+            <p>"Класицизм - це дисципліна, симетрія і ідеальний порядок. Він виражає стійкість і спокій, але в той же час, здатність до висловлення глибоких почуттів." - Жан-Жак Руссо</p>
+            <a href="#general-part" class="hero-btn">Детальніше</a>
+        </div>
+    </section>
+
+    <section class="general" id="general-part">
+        <h1>Класицизм</h1>
+        <div class="general-textbox">
+            <hr>
+            <p>
+                Епоха класицизму в музиці, яка охоплює період близько з 1750 по 1820 роки, визначається здебільшого раціоналізмом, логічністю та симетрією. Це була ера, коли музиканти і композитори намагалися повернутися до класичних ідеалів, відроджуючи спадщину античності. Основні риси епохи класицизму в музиці включають:
+                <br>
+                Епоха класицизму в музиці представляє собою період строгих формальних принципів, симетрії та раціональності, що надали музиці нові характеристики та вплинули на подальший розвиток музичного мистецтва.
+            </p>
+            <hr>
+        </div>
+    </section>
+
+    <section class="main">
+        <h1>Більше про віденський та український класицизм</h1>
+        <p>Віденський та український класицизм - це надзвичайне поєднання естетики і інтелекту,<br>яке надихає наші душі та залишає незабутні враження.</p>
+
+        <div class="row">
+            <a href="vidclas.html" class="main-col">
+                <div>
+                    <img src="images/img3.jpg" alt="">
+                    <div class="layer">
+                        <h3>Віденський класицизм</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ukrclas.html" class="main-col">
+                <div>
+                    <img src="images/img4.jpg" alt="">
+                    <div class="layer">
+                        <h3>Український класицизм</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="footer">
+        <i class="fa fa-moon-o"></i>
+        <p>© 2023. Розроблено<br>Тимкович Катериною.</p>
+    </section>
+
+
+
+
+    <!----- js code for toggle menu ----->
+    <script>
+        let navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+
+    <!----- js code for title animation ----->
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let myText=document.getElementById("my-text");
+            myText.style.opacity="1";
+        });
+    </script>
+
+</body>
+</html>

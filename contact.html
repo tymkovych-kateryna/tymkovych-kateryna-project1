@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класицизм: віденський та український класицизм</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/img2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="vidclas.html">Віденський класицизм</a></li>
+                    <li><a href="ukrclas.html">Український класицизм</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1 id="my-text">Контактна інформація</h1>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+380 12 345 6789</h5>
+                        <p>Пн - пт, 9.00 - 18.00</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>testemail@gmail.com</h5>
+                        <p>Надішліть запит або побажання</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="contact-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" name="name" placeholder="Ім'я" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="text" name="subject" placeholder="Тема повідомлення" required>
+                    <textarea rows="8" name="message" placeholder="Повідомлення" required></textarea>
+                    <button type="submit" class="hero-btn contact-btn">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <i class="fa fa-moon-o"></i>
+        <p>© 2023. Розроблено<br>Тимкович Катериною.</p>
+    </section>
+
+
+
+
+    <!----- js code for toggle menu ----->
+    <script>
+        let navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+
+    <!----- js code for title animation ----->
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let myText=document.getElementById("my-text");
+            myText.style.opacity="1";
+        });
+    </script>
+
+</body>
+</html>
